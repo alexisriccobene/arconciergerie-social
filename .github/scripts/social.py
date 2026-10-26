@@ -93,6 +93,11 @@ if MODE == 'verifier':
     me = api('GET', '/' + PAGE, fields='name')
     print('::notice::Connexion Meta OK : page « %s », Instagram %s' % (me.get('name'), ig))
     etat = {'page': me.get('name'), 'instagram': ig, 'controle': datetime.now(ZoneInfo('Europe/Paris')).isoformat(timespec='minutes')}
+    try:
+        dt = api('GET', '/debug_token', input_token=TOKEN).get('data', {})
+        f = lambda t: 'jamais' if not t else datetime.fromtimestamp(t, ZoneInfo('Europe/Paris')).strftime('%d/%m/%Y')
+        etat['token'] = {'type': dt.get('type'), 'valide': dt.get('is_valid'), 'expire': f(dt.get('expires_at')), 'acces_donnees_jusqu_au': f(dt.get('data_access_expires_at'))}
+    except Exception as e: etat['token'] = 'erreur : ' + str(e)[:200]
     done0 = json.load(open(DONE, encoding='utf-8')) if os.path.exists(DONE) else {}
     types = {x['id']: x.get('type') for x in json.load(open(PLAN, encoding='utf-8'))} if os.path.exists(PLAN) else {}
     for k, v in list(done0.items())[-3:]:
