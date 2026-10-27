@@ -28,7 +28,7 @@ jobs:
       - name: Enregistrer les publications faites
         if: always()
         run: |
-          if [ -n "$(git status --porcelain .github/social/publie.json .github/social/etat.json)" ]; then
+          if [ -n "$(git status --porcelain .github/social/publie.json .github/social/etat.json .github/social/inventaire.json)" ]; then
             git config user.name "ArConciergerie publication"; git config user.email "contact@arconciergerie.com"
-            git add .github/social/publie.json; [ -f .github/social/etat.json ] && git add .github/social/etat.json; git commit -m "Publications faites" && git pull --rebase && git push
+            git add .github/social/publie.json; [ -f .github/social/etat.json ] && git add .github/social/etat.json; [ -f .github/social/inventaire.json ] && git add .github/social/inventaire.json; git commit -m "Publications faites" && git pull --rebase && git push
           fi

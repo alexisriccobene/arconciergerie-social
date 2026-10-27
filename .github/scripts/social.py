@@ -110,6 +110,19 @@ if MODE == 'verifier':
             except Exception as e: etat[k + ' ' + net] = 'erreur : ' + str(e)[:300]
     try: etat['stories facebook de la page'] = api('GET', '/%s/stories' % PAGE).get('data', [])[:5]
     except Exception as e: etat['stories facebook de la page'] = 'erreur : ' + str(e)[:300]
+    try:
+        inv, url = [], '/%s/media' % ig
+        q = {'fields': 'caption,media_type,permalink,timestamp,children{media_type}', 'limit': 100}
+        while url and len(inv) < 500:
+            r = api('GET', url, **q); inv += r.get('data', [])
+            nxt = r.get('paging', {}).get('cursors', {}).get('after') if r.get('paging', {}).get('next') else None
+            if not nxt: break
+            q['after'] = nxt
+        prof = api('GET', '/' + ig, fields='username,media_count,followers_count,biography')
+        json.dump({'profil': prof, 'publications': [{'date': m.get('timestamp', '')[:10], 'type': m.get('media_type'), 'nb_images': len(m.get('children', {}).get('data', [])) or 1,
+                   'lien': m.get('permalink'), 'texte': (m.get('caption') or '')[:400]} for m in inv]},
+                  open('.github/social/inventaire.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    except Exception as e: etat['inventaire'] = 'erreur : ' + str(e)[:300]
     json.dump(etat, open('.github/social/etat.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     sys.exit(0)
 
