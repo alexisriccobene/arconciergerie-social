@@ -1,0 +1,25 @@
+name: Images des publications existantes
+on:
+  push:
+    branches: [main]
+    paths: [.github/scripts/medias.py, .github/workflows/medias.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recuperer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow
+      - run: python3 .github/scripts/medias.py
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      - name: Publier sur la branche medias
+        run: |
+          cd out
+          git init -q -b medias && git config user.name "ArConciergerie publication" && git config user.email "contact@arconciergerie.com"
+          git add -A && git commit -qm "Images des publications Instagram existantes"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" medias
