@@ -1,0 +1,36 @@
+name: Rapport hebdomadaire
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  rapport:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier la semaine écoulée
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
+          now = datetime.now(ZoneInfo('Europe/Paris'))
+          plan = json.load(open('.github/social/plan.json')); done = json.load(open('.github/social/publie.json'))
+          manque = []
+          for p in plan:
+              d = datetime.fromisoformat(p['date']).replace(tzinfo=ZoneInfo('Europe/Paris'))
+              if now - timedelta(days=7) <= d <= now - timedelta(hours=1):
+                  for n in p.get('reseaux', []):
+                      if not done.get(p['id'], {}).get(n): manque.append('%s (%s) : %s' % (p['id'], p['date'], n))
+          print('manquants :', manque)
+          if manque:
+              repo = os.environ['GITHUB_REPOSITORY']; h = {'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'], 'Accept': 'application/vnd.github+json'}
+              body = "Publications prévues cette semaine mais non publiées :\n\n" + '\n'.join('- ' + m for m in manque) + "\n\nOuvrez la conversation Claude ArConciergerie et écrivez : « alerte publication »."
+              r = urllib.request.Request('https://api.github.com/repos/%s/issues' % repo, data=json.dumps({'title': 'Rapport : publications manquantes (%s)' % now.strftime('%d/%m'), 'body': body, 'assignees': [repo.split('/')[0]]}).encode(), headers=h, method='POST')
+              urllib.request.urlopen(r, timeout=30)
+          PY

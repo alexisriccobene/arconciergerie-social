@@ -64,6 +64,21 @@ def publish_fb(p):
 
 if not TOKEN or not PAGE:
     print('::warning::Publication automatique non configurée (secrets META_PAGE_TOKEN et FB_PAGE_ID manquants)'); sys.exit(0)
+def alerte_github(titre, corps):
+    # Ouvre une alerte GitHub assignée au propriétaire du dépôt (e-mail automatique). Une seule alerte ouverte par titre.
+    gh = os.environ.get('GITHUB_TOKEN'); repo = os.environ.get('GITHUB_REPOSITORY', '')
+    if not gh or not repo: return
+    h = {'Authorization': 'Bearer ' + gh, 'Accept': 'application/vnd.github+json'}
+    try:
+        q = urllib.request.Request('https://api.github.com/repos/%s/issues?state=open&per_page=100' % repo, headers=h)
+        for i in json.loads(urllib.request.urlopen(q, timeout=30).read()):
+            if i.get('title') == titre:
+                c = urllib.request.Request(i['url'] + '/comments', data=json.dumps({'body': corps}).encode(), headers=h, method='POST')
+                urllib.request.urlopen(c, timeout=30); return
+        r = urllib.request.Request('https://api.github.com/repos/%s/issues' % repo, data=json.dumps({'title': titre, 'body': corps, 'assignees': [repo.split('/')[0]]}).encode(), headers=h, method='POST')
+        urllib.request.urlopen(r, timeout=30)
+    except Exception as e: print('alerte GitHub impossible :', str(e)[:200])
+
 def alerte_expiration():
     # Une fois par jour (vers 9 h) : si l'autorisation Meta expire dans moins de 15 jours, ouvre une alerte GitHub (e-mail au propriétaire du dépôt)
     try:
@@ -83,7 +98,7 @@ def alerte_expiration():
     if any(i.get('title') == titre for i in json.loads(urllib.request.urlopen(q, timeout=30).read())): return
     body = ("L'autorisation qui permet de publier sur Instagram et Facebook expire dans %d jours.\n\n"
             "Ouvrez la conversation Claude ArConciergerie et écrivez : « renouveler Meta ». Cela prend 2 minutes.") % max(0, jours)
-    r = urllib.request.Request('https://api.github.com/repos/%s/issues' % repo, data=json.dumps({'title': titre, 'body': body}).encode(), headers=h, method='POST')
+    r = urllib.request.Request('https://api.github.com/repos/%s/issues' % repo, data=json.dumps({'title': titre, 'body': body, 'assignees': [repo.split('/')[0]]}).encode(), headers=h, method='POST')
     urllib.request.urlopen(r, timeout=30); print('::warning::' + titre + ' : expire dans %d jours' % jours)
 
 ig = ig_id()
@@ -147,4 +162,8 @@ for p in plan:
             d[net + '_echecs'] = d.get(net + '_echecs', 0) + 1; changed = True
             errors.append('%s %s : %s' % (p['id'], net, e)); print('::error::%s %s : %s' % (p['id'], net, str(e)[:600]))
 if changed: json.dump(done, open(DONE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+if errors:
+    corps = ("Une ou plusieurs publications n'ont pas pu partir :\n\n" + '\n'.join('- ' + e[:400] for e in errors) +
+             "\n\nLe robot fait au plus deux essais par réseau. Ouvrez la conversation Claude ArConciergerie et écrivez : « alerte publication ».")
+    alerte_github('Échec de publication Instagram / Facebook', corps)
 sys.exit(1 if errors else 0)
