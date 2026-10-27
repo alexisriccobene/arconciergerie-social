@@ -1,0 +1,24 @@
+name: Sources des visuels
+on:
+  push:
+    branches: [main]
+    paths: [.github/scripts/sources.py, .github/workflows/sources.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sources
+jobs:
+  recuperer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow
+      - run: python3 .github/scripts/sources.py
+      - name: Publier sur la branche sources
+        run: |
+          cd out
+          git init -q -b sources && git config user.name "ArConciergerie publication" && git config user.email "contact@arconciergerie.com"
+          git add -A && git commit -qm "Sources des visuels (site arconciergerie.com)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" sources
