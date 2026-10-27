@@ -1,0 +1,22 @@
+name: Logo du site
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/logo.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out && cd out
+          for p in "" nos-villas/ nos-services/ a-propos/; do curl -sL -A "Mozilla/5.0" "https://arconciergerie.com/$p" ; done > pages.html
+          grep -oiE 'https://arconciergerie\.com/wp-content/uploads/[^"'"'"' )]+\.(png|svg|webp|jpg)' pages.html | grep -iE 'logo|ar-|monogram|favicon|cropped' | sort -u > liste.txt
+          cat liste.txt
+          i=0; while read u; do i=$((i+1)); curl -sL -A "Mozilla/5.0" -o "$(printf %02d $i)-$(basename "$u")" "$u"; done < liste.txt
+          grep -oiE 'https://arconciergerie\.com/(nos-services|services)/[a-z0-9/-]+' pages.html | sort -u > services.txt
+          rm pages.html
+          git init -q -b logo && git config user.name "ArConciergerie publication" && git config user.email "contact@arconciergerie.com"
+          git add -A && git commit -qm "Logo du site" && git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" logo
