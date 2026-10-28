@@ -108,7 +108,8 @@ if MODE == 'verifier':
     c = createur(tok); etat({'connexion': 'OK', 'compte': c.get('creator_username'), 'confidentialite_possible': c.get('privacy_level_options')})
     if os.environ.get('TIKTOK_TEST'):  # essai de publication demandé
         p = next(x for x in json.load(open(PLAN, encoding='utf-8')) if x['id'] == os.environ['TIKTOK_TEST'])
-        etat({'essai ' + p['id']: publier_video(p) if p.get('type') == 'reel' else publier_photos(p)})
+        try: etat({'essai ' + p['id']: publier_video(p) if p.get('type') == 'reel' else publier_photos(p)})
+        except Exception as e: etat({'essai ' + p['id']: 'échec : ' + str(e)[:500]})
     sys.exit(0)
 
 # Publication des contenus TikTok arrivés à échéance
