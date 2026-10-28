@@ -149,6 +149,17 @@ if MODE == 'verifier':
                    'lien': m.get('permalink'), 'texte': (m.get('caption') or '')[:400]} for m in inv]},
                   open('.github/social/inventaire.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     except Exception as e: etat['inventaire'] = 'erreur : ' + str(e)[:300]
+    # Test des Reels à venir : Instagram télécharge et traite la vidéo, sans rien publier
+    for p in [x for x in json.load(open(PLAN, encoding='utf-8')) if x.get('type') == 'reel']:
+        try:
+            c = api('POST', '/%s/media' % ig, media_type='REELS', video_url=VID + p['video'], caption='test', share_to_feed='true')['id']
+            st = 'IN_PROGRESS'
+            for _ in range(60):
+                r = api('GET', '/' + c, fields='status_code,status'); st = r.get('status_code')
+                if st in ('FINISHED', 'ERROR'): break
+                time.sleep(5)
+            etat['test ' + p['id']] = 'Instagram : ' + str(st) + ('' if st == 'FINISHED' else ' ' + str(r.get('status', '')))
+        except Exception as e: etat['test ' + p['id']] = 'erreur : ' + str(e)[:300]
     json.dump(etat, open('.github/social/etat.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     sys.exit(0)
 
