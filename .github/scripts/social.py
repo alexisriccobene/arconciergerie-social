@@ -26,8 +26,8 @@ def ig_id():
     if not r.get('instagram_business_account'): raise RuntimeError('aucun compte Instagram professionnel relié à la page ' + r.get('name', PAGE))
     return r['instagram_business_account']['id']
 
-def ig_wait(cid):
-    for _ in range(30):
+def ig_wait(cid, essais=30):
+    for _ in range(essais):
         s = api('GET', '/' + cid, fields='status_code').get('status_code')
         if s == 'FINISHED': return
         if s == 'ERROR': raise RuntimeError('Instagram a refusé un média')
@@ -55,6 +55,17 @@ def publish_fb_story(p):
     ph = api('POST', '/%s/photos' % PAGE, url=RAW + p['images'][0], published='false')['id']
     r = api('POST', '/%s/photo_stories' % PAGE, photo_id=ph)
     return r.get('post_id') or r.get('id') or 'ok'
+
+VID = RAW.replace('/img/', '/videos/')
+def publish_ig_reel(ig, p):
+    # Reel Instagram : la vidéo apparaît aussi dans le fil (share_to_feed)
+    c = api('POST', '/%s/media' % ig, media_type='REELS', video_url=VID + p['video'], caption=p['texte_instagram'],
+            share_to_feed='true', thumb_offset=str(p.get('vignette_ms', 0)))['id']
+    ig_wait(c, 72)
+    return api('POST', '/%s/media_publish' % ig, creation_id=c)['id']
+
+def publish_fb_video(p):
+    return api('POST', '/%s/videos' % PAGE, file_url=VID + p['video'], description=p['texte_facebook'])['id']
 
 def publish_fb(p):
     ids = [api('POST', '/%s/photos' % PAGE, url=RAW + f, published='false')['id'] for f in p['images']]
@@ -150,9 +161,9 @@ for p in plan:
     if when > now: continue
     if (now - when).total_seconds() > 20 * 3600: continue  # filet de sécurité : au-delà de 20 h de retard, on ne publie plus
     d = done.setdefault(p['id'], {})
-    story = p.get('type') == 'story'
-    jobs = (('instagram', lambda: publish_ig_story(ig, p) if story else publish_ig(ig, p)),
-            ('facebook', lambda: publish_fb_story(p) if story else publish_fb(p)))
+    story, reel = p.get('type') == 'story', p.get('type') == 'reel'
+    jobs = (('instagram', lambda: publish_ig_reel(ig, p) if reel else publish_ig_story(ig, p) if story else publish_ig(ig, p)),
+            ('facebook', lambda: publish_fb_video(p) if reel else publish_fb_story(p) if story else publish_fb(p)))
     for net, fn in jobs:
         if net not in p.get('reseaux', ['instagram', 'facebook']) or d.get(net): continue
         if d.get(net + '_echecs', 0) >= 2: continue  # deux échecs : on n'insiste pas (évite les alertes en boucle)
