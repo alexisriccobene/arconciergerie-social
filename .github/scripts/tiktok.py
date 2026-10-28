@@ -88,7 +88,14 @@ def publier_video(p):
             'video_cover_timestamp_ms': p.get('vignette_ms', 1000), 'brand_content_toggle': False, 'brand_organic_toggle': True}
     # Envoi direct du fichier (FILE_UPLOAD) : pas de dépendance au site, un seul bloc jusqu'à 64 Mo
     f = '.github/social/videos/' + p['video']; n = os.path.getsize(f)
-    r = req(API + '/post/publish/video/init/', {'post_info': info, 'source_info': {'source': 'FILE_UPLOAD', 'video_size': n, 'chunk_size': n, 'total_chunk_count': 1}}, tok['access_token'], js=True)
+    src = {'source': 'FILE_UPLOAD', 'video_size': n, 'chunk_size': n, 'total_chunk_count': 1}
+    mode = 'publication directe'
+    try:
+        r = req(API + '/post/publish/video/init/', {'post_info': info, 'source_info': src}, tok['access_token'], js=True)
+    except RuntimeError as e:
+        if 'unaudited_client' not in str(e): raise
+        # Application pas encore validée par TikTok : la vidéo part dans la boîte de réception TikTok (brouillon à publier d'un geste)
+        r = req(API + '/post/publish/inbox/video/init/', {'source_info': src}, tok['access_token'], js=True); mode = 'brouillon dans TikTok'
     pid = r['data']['publish_id']
     up = urllib.request.Request(r['data']['upload_url'], data=open(f, 'rb').read(), method='PUT',
                                 headers={'Content-Type': 'video/mp4', 'Content-Length': str(n), 'Content-Range': 'bytes 0-%d/%d' % (n - 1, n)})
@@ -96,10 +103,10 @@ def publier_video(p):
     except urllib.error.HTTPError as e: raise RuntimeError('TikTok envoi vidéo %s : %s' % (e.code, e.read()[:300]))
     for _ in range(60):
         s = req(API + '/post/publish/status/fetch/', {'publish_id': pid}, tok['access_token'], js=True).get('data', {})
-        if s.get('status') == 'PUBLISH_COMPLETE': return {'id': pid, 'confidentialite': priv}
+        if s.get('status') in ('PUBLISH_COMPLETE', 'SEND_TO_USER_INBOX'): return {'id': pid, 'mode': mode, 'statut': s.get('status')}
         if s.get('status') == 'FAILED': raise RuntimeError('TikTok a refusé la vidéo : ' + str(s.get('fail_reason')))
         time.sleep(10)
-    return {'id': pid, 'confidentialite': priv, 'statut': 'en cours'}
+    return {'id': pid, 'mode': mode, 'statut': 'en cours'}
 
 def publier_photos(p):
     c = createur(tok)
