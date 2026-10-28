@@ -1,21 +1,5 @@
 [
  {
-  "id": "test-tiktok-photos",
-  "type": "post",
-  "date": "2026-10-01T10:00",
-  "reseaux": [],
-  "images": [],
-  "images_tiktok": [
-   "test/p06-villa-leva-01.jpg",
-   "test/p06-villa-leva-02.jpg",
-   "test/p06-villa-leva-03.jpg",
-   "test/p06-villa-leva-04.jpg",
-   "test/p06-villa-leva-05.jpg"
-  ],
-  "titre_tiktok": "Villa Leva — Pinarello",
-  "texte_tiktok": "Villa Leva — Pinarello\n\nTout ici est tourné vers la baie : les pièces de vie, les cinq suites et la piscine à débordement de 15 mètres, orientée vers le large et la tour génoise. Une salle de sport, une cuisine extérieure ombragée et une cave de grands crus complètent la maison.\n\n12 voyageurs · 5 suites · 300 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nFive suites facing Pinarello bay and its Genoese tower. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud"
- },
- {
   "id": "story-2026-11-02",
   "type": "story",
   "date": "2026-11-02T12:30",
@@ -173,6 +157,25 @@
   ],
   "texte_instagram": "Villa Ghjiu — Pinarello\n\nSur les hauteurs de Pinarello, à 700 mètres de la plage, une villa contemporaine de pierre, de bois et de verre qui s'ouvre sur près de 500 m² de terrasses face à la baie. Six chambres climatisées, dont cinq avec vue mer, une piscine à débordement chauffée, un spa, un putting green et une cuisine d'été.\n\n12 voyageurs · 6 chambres · 400 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nAbove Pinarello bay, with 500 m² of terraces facing the sea. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud",
   "texte_facebook": "Villa Ghjiu — Pinarello\n\nSur les hauteurs de Pinarello, à 700 mètres de la plage, une villa contemporaine de pierre, de bois et de verre qui s'ouvre sur près de 500 m² de terrasses face à la baie. Six chambres climatisées, dont cinq avec vue mer, une piscine à débordement chauffée, un spa, un putting green et une cuisine d'été.\n\n12 voyageurs · 6 chambres · 400 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nAbove Pinarello bay, with 500 m² of terraces facing the sea. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud"
+ },
+ {
+  "id": "tt-ghjiu-villa",
+  "type": "post",
+  "theme": "Villa — Villa Ghjiu",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-ghjiu-villa/01.jpg",
+   "tt-ghjiu-villa/02.jpg",
+   "tt-ghjiu-villa/03.jpg",
+   "tt-ghjiu-villa/04.jpg",
+   "tt-ghjiu-villa/05.jpg"
+  ],
+  "titre_tiktok": "Villa Ghjiu — Pinarello",
+  "texte_tiktok": "Villa Ghjiu — Pinarello\n\nSur les hauteurs de Pinarello, à 700 mètres de la plage, une villa contemporaine de pierre, de bois et de verre qui s'ouvre sur près de 500 m² de terrasses face à la baie. Six chambres climatisées, dont cinq avec vue mer, une piscine à débordement chauffée, un spa, un putting green et une cuisine d'été.\n\n12 voyageurs · 6 chambres · 400 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nAbove Pinarello bay, with 500 m² of terraces facing the sea. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel",
+  "date": "2026-11-07T19:00"
  },
  {
   "id": "story-2026-11-08",
@@ -558,6 +561,27 @@
   "texte_facebook": "Carnet de Corse — Bonifacio\n\nAu sud de Bonifacio, Cala Longa fait face à Cavallo, aux Lavezzi et, par temps clair, à la Sardaigne. Une côte de granit et de maquis où l'on vient pour le silence, et où l'on revient pour la lumière du soir.\n\nNotes from southern Corsica: Cala Longa, facing Cavallo and Sardinia.\n\n#Bonifacio #CalaLonga #CorseDuSud #ArtDeVivre"
  },
  {
+  "id": "tt-belvedere-villa",
+  "type": "post",
+  "theme": "Villa — Villa Belvedere",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-belvedere-villa/01.jpg",
+   "tt-belvedere-villa/02.jpg",
+   "tt-belvedere-villa/03.jpg",
+   "tt-belvedere-villa/04.jpg",
+   "tt-belvedere-villa/05.jpg",
+   "tt-belvedere-villa/06.jpg",
+   "tt-belvedere-villa/07.jpg"
+  ],
+  "titre_tiktok": "Villa Belvedere — Palombaggia",
+  "texte_tiktok": "Villa Belvedere — Palombaggia\n\nPerchée face à la baie de Palombaggia, une villa d'architecte qui vit au rythme du soleil : terrasses à l'ombre ou en pleine lumière, piscine chauffée à débordement, 3 500 m² de jardin planté d'oliviers et de chênes.\n\n10 voyageurs · 4 chambres · 4 salles de bain · 220 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nPanoramic views over Palombaggia bay, heated infinity pool. Sleeps 10.\n\n#Palombaggia #PortoVecchio #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel",
+  "date": "2026-11-21T19:00"
+ },
+ {
   "id": "story-2026-11-22",
   "type": "story",
   "date": "2026-11-22T12:30",
@@ -708,6 +732,22 @@
   ]
  },
  {
+  "id": "reel-2026-11-26-spa-a-la-villa",
+  "type": "reel",
+  "date": "2026-11-26T19:00",
+  "theme": "Reel",
+  "reseaux": [
+   "instagram",
+   "facebook",
+   "tiktok"
+  ],
+  "video": "spa-a-la-villa.mp4",
+  "vignette_ms": 1500,
+  "texte_instagram": "Le spa vient à vous. Massage face à la mer, bain aux agrumes, yoga au lever du soleil : nos praticiens s'installent à la villa, à l'heure qui vous convient.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#SpaALaVilla #BienEtre #Massage #Yoga #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_facebook": "Le spa vient à vous. Massage face à la mer, bain aux agrumes, yoga au lever du soleil : nos praticiens s'installent à la villa, à l'heure qui vous convient.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#SpaALaVilla #BienEtre #Massage #Yoga #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_tiktok": "Le spa vient à vous. Massage face à la mer, bain aux agrumes, yoga au lever du soleil : nos praticiens s'installent à la villa, à l'heure qui vous convient.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#SpaALaVilla #BienEtre #Massage #Yoga #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe"
+ },
+ {
   "id": "story-2026-11-27",
   "type": "story",
   "date": "2026-11-27T12:30",
@@ -772,6 +812,25 @@
   ],
   "texte_instagram": "Villa Lumicella — Pinarello\n\nÀ 300 mètres de la plage de Pinarello, dans un domaine clos de 2 000 m², une villa contemporaine entièrement climatisée : six chambres avec salle de bain privative, dont deux suites parentales, une piscine chauffée, une salle de cinéma et une terrasse de plus de 130 m².\n\n12 voyageurs · 6 chambres · 270 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\n300 m from Pinarello beach, heated pool, private cinema. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud",
   "texte_facebook": "Villa Lumicella — Pinarello\n\nÀ 300 mètres de la plage de Pinarello, dans un domaine clos de 2 000 m², une villa contemporaine entièrement climatisée : six chambres avec salle de bain privative, dont deux suites parentales, une piscine chauffée, une salle de cinéma et une terrasse de plus de 130 m².\n\n12 voyageurs · 6 chambres · 270 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\n300 m from Pinarello beach, heated pool, private cinema. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud"
+ },
+ {
+  "id": "tt-svc-la-table",
+  "type": "post",
+  "theme": "Service — Au menu",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-la-table/01.jpg",
+   "tt-svc-la-table/02.jpg",
+   "tt-svc-la-table/03.jpg",
+   "tt-svc-la-table/04.jpg",
+   "tt-svc-la-table/05.jpg"
+  ],
+  "titre_tiktok": "Au menu",
+  "texte_tiktok": "Au menu\n\nUn chef privé s'installe dans votre cuisine, le temps d'un dîner ou pour toute la durée du séjour. Produits de l'île, poissons du jour, cuisine méditerranéenne ou japonaise : le menu se construit avec vous, selon vos goûts et vos allergies.\n\nA private chef in your villa, for one evening or the whole stay.\n\n#ChefPrive #CorseDuSud #PortoVecchio #ArtDeVivre #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2026-11-28T19:00"
  },
  {
   "id": "story-2026-11-29",
@@ -921,6 +980,24 @@
   "images": [
    "story-2026-12-05.jpg"
   ]
+ },
+ {
+  "id": "tt-sole-villa",
+  "type": "post",
+  "theme": "Villa — Villa Sole",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-sole-villa/01.jpg",
+   "tt-sole-villa/02.jpg",
+   "tt-sole-villa/03.jpg",
+   "tt-sole-villa/04.jpg"
+  ],
+  "titre_tiktok": "Villa Sole — Pinarello",
+  "texte_tiktok": "Villa Sole — Pinarello\n\nUne villa d'architecte neuve, dans un domaine privé à 900 mètres de la plage de Pinarello. La pièce de vie de plus de 100 m² s'ouvre sur la terrasse et la piscine chauffée ; une salle de cinéma, un billard et une salle de sport occupent les soirées.\n\n14 voyageurs · 6 chambres · 6 salles de bain · 280 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nNew architect villa, 900 m from Pinarello beach. Sleeps 14.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel",
+  "date": "2026-12-05T19:00"
  },
  {
   "id": "story-2026-12-06",
@@ -1142,6 +1219,22 @@
   ]
  },
  {
+  "id": "reel-2026-12-17-nuits-d-ete",
+  "type": "reel",
+  "date": "2026-12-17T19:00",
+  "theme": "Reel",
+  "reseaux": [
+   "instagram",
+   "facebook",
+   "tiktok"
+  ],
+  "video": "nuits-d-ete.mp4",
+  "vignette_ms": 1500,
+  "texte_instagram": "Les nuits d'été en Corse du Sud. Bougies, guirlandes, un verre entre amis, le feu qui crépite et les étoiles pour finir. Nous organisons vos soirées, de la table au feu d'artifice.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#NuitsDEte #SoireePrivee #Evenement #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_facebook": "Les nuits d'été en Corse du Sud. Bougies, guirlandes, un verre entre amis, le feu qui crépite et les étoiles pour finir. Nous organisons vos soirées, de la table au feu d'artifice.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#NuitsDEte #SoireePrivee #Evenement #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_tiktok": "Les nuits d'été en Corse du Sud. Bougies, guirlandes, un verre entre amis, le feu qui crépite et les étoiles pour finir. Nous organisons vos soirées, de la table au feu d'artifice.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#NuitsDEte #SoireePrivee #Evenement #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe"
+ },
+ {
   "id": "story-2026-12-18",
   "type": "story",
   "date": "2026-12-18T12:30",
@@ -1185,6 +1278,26 @@
   "images": [
    "story-2026-12-19.jpg"
   ]
+ },
+ {
+  "id": "tt-le-moulin-villa",
+  "type": "post",
+  "theme": "Villa — Le Moulin Génois",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-le-moulin-villa/01.jpg",
+   "tt-le-moulin-villa/02.jpg",
+   "tt-le-moulin-villa/03.jpg",
+   "tt-le-moulin-villa/04.jpg",
+   "tt-le-moulin-villa/05.jpg",
+   "tt-le-moulin-villa/06.jpg"
+  ],
+  "titre_tiktok": "Le Moulin Génois — Citadelle",
+  "texte_tiktok": "Le Moulin Génois — Citadelle\n\nSur les falaises calcaires de Bonifacio, un ancien moulin génois du XIIIᵉ siècle devenu demeure de caractère. Trois suites, un salon ouvert sur le large, une piscine intérieure chauffée sous verrière. La pierre, le bois et la terre cuite ont été conservés dans le respect du lieu.\n\n6 voyageurs · 3 suites · 420 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nA 13th-century Genoese windmill on the cliffs of Bonifacio, with an indoor heated pool. Sleeps 6.\n\n#Bonifacio #Citadelle #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2026-12-19T19:00"
  },
  {
   "id": "story-2026-12-20",
@@ -1445,6 +1558,25 @@
   ]
  },
  {
+  "id": "tt-svc-en-mer",
+  "type": "post",
+  "theme": "Service — Le large",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-en-mer/01.jpg",
+   "tt-svc-en-mer/02.jpg",
+   "tt-svc-en-mer/03.jpg",
+   "tt-svc-en-mer/04.jpg",
+   "tt-svc-en-mer/05.jpg"
+  ],
+  "titre_tiktok": "Le large",
+  "texte_tiktok": "Le large\n\nYachts avec équipage, à la journée ou à la semaine, au départ de Porto-Vecchio ou de Bonifacio : les Lavezzi, Cavallo, la Sardaigne. Nous choisissons l'unité selon votre groupe, la météo et vos envies, et réservons les tables à terre.\n\nCrewed yachts by the day or week, from Porto-Vecchio or Bonifacio.\n\n#Yacht #Lavezzi #Bonifacio #CorseDuSud #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2027-01-02T19:00"
+ },
+ {
   "id": "story-2027-01-03",
   "type": "story",
   "date": "2027-01-03T12:30",
@@ -1574,6 +1706,25 @@
   ]
  },
  {
+  "id": "tt-oliveto-villa",
+  "type": "post",
+  "theme": "Villa — Villa Oliveto",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-oliveto-villa/01.jpg",
+   "tt-oliveto-villa/02.jpg",
+   "tt-oliveto-villa/03.jpg",
+   "tt-oliveto-villa/04.jpg",
+   "tt-oliveto-villa/05.jpg"
+  ],
+  "titre_tiktok": "Villa Oliveto — Santa Giulia",
+  "texte_tiktok": "Villa Oliveto — Santa Giulia\n\nUne villa d'architecte de 400 m² sur un domaine paysager de 4 000 m², à deux minutes de la plage de Santa Giulia et quinze de Palombaggia. Cinq chambres avec salle de bains, une pièce de vie de près de 100 m², une piscine chauffée et une salle de cinéma.\n\n12 voyageurs · 5 chambres · 400 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nArchitect villa on 4,000 m² of grounds, two minutes from Santa Giulia beach. Sleeps 12.\n\n#SantaGiulia #PortoVecchio #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel",
+  "date": "2027-01-09T19:00"
+ },
+ {
   "id": "story-2027-01-10",
   "type": "story",
   "date": "2027-01-10T12:30",
@@ -1675,6 +1826,18 @@
   "texte_tiktok": "L'été en Corse du Sud s'écoute aussi. La houle sur le granit, une piscine à débordement, un rosé face au couchant, la braise à la nuit tombée.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur arconciergerie.com.\n\n#SoundsOfSummer #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe #Bonifacio"
  },
  {
+  "id": "tt-reel-sounds-of-summer",
+  "type": "reel",
+  "date": "2027-01-14T19:00",
+  "theme": "Reel — Sounds of Summer",
+  "reseaux": [
+   "tiktok"
+  ],
+  "video": "sounds-of-summer.mp4",
+  "vignette_ms": 4000,
+  "texte_tiktok": "L'été en Corse du Sud s'écoute aussi. La houle sur le granit, une piscine à débordement, un rosé face au couchant, la braise à la nuit tombée.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur arconciergerie.com.\n\n#SoundsofSummer #Corse #CorseDuSud #Corsica #VillaDeLuxe #LuxuryTravel #PortoVecchio"
+ },
+ {
   "id": "story-2027-01-15",
   "type": "story",
   "date": "2027-01-15T12:30",
@@ -1718,6 +1881,28 @@
   "images": [
    "story-2027-01-16.jpg"
   ]
+ },
+ {
+  "id": "tt-aria-mare-villa",
+  "type": "post",
+  "theme": "Villa — Villa Aria Mare",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-aria-mare-villa/01.jpg",
+   "tt-aria-mare-villa/02.jpg",
+   "tt-aria-mare-villa/03.jpg",
+   "tt-aria-mare-villa/04.jpg",
+   "tt-aria-mare-villa/05.jpg",
+   "tt-aria-mare-villa/06.jpg",
+   "tt-aria-mare-villa/07.jpg",
+   "tt-aria-mare-villa/08.jpg"
+  ],
+  "titre_tiktok": "Villa Aria Mare — Sainte-Lucie-de-Porto-Vecchio",
+  "texte_tiktok": "Villa Aria Mare — Sainte-Lucie-de-Porto-Vecchio\n\nSur les hauteurs de Sainte-Lucie, une villa contemporaine en position dominante : la mer se voit depuis le salon, les cinq suites et la terrasse. Piscine chauffée de 14,5 mètres, jacuzzi face au large, et les plages de Pinarello, Fautea et Cala d'Oru à quelques minutes.\n\n10 voyageurs · 5 suites · 230 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nFive sea-view suites above Sainte-Lucie, heated 14.5 m pool and jacuzzi. Sleeps 10.\n\n#SainteLucie #Pinarello #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-01-16T19:00"
  },
  {
   "id": "story-2027-01-17",
@@ -1978,6 +2163,25 @@
   ]
  },
  {
+  "id": "tt-svc-l-arrivee",
+  "type": "post",
+  "theme": "Service — Le ciel",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-l-arrivee/01.jpg",
+   "tt-svc-l-arrivee/02.jpg",
+   "tt-svc-l-arrivee/03.jpg",
+   "tt-svc-l-arrivee/04.jpg",
+   "tt-svc-l-arrivee/05.jpg"
+  ],
+  "titre_tiktok": "Le ciel",
+  "texte_tiktok": "Le ciel\n\nDepuis l'aéroport de Figari, la villa n'est qu'à quelques minutes en hélicoptère. Transferts, survols des Lavezzi et de Bonifacio, arrivées sur l'île de Cavallo : nous réservons, coordonnons et vous attendons à l'atterrissage.\n\nHelicopter transfers and scenic flights across southern Corsica.\n\n#Helicoptere #Bonifacio #Cavallo #CorseDuSud #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2027-01-30T19:00"
+ },
+ {
   "id": "story-2027-01-31",
   "type": "story",
   "date": "2027-01-31T12:30",
@@ -2064,6 +2268,22 @@
   "images": [
    "story-2027-02-04.jpg"
   ]
+ },
+ {
+  "id": "reel-2027-02-04-le-chef-s-installe",
+  "type": "reel",
+  "date": "2027-02-04T19:00",
+  "theme": "Reel",
+  "reseaux": [
+   "instagram",
+   "facebook",
+   "tiktok"
+  ],
+  "video": "le-chef-s-installe.mp4",
+  "vignette_ms": 1500,
+  "texte_instagram": "Le chef s'installe chez vous. Un menu construit selon vos envies, servi à table ou en pleine nature, avec les vins accordés.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#ChefPrive #PrivateChef #Gastronomie #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_facebook": "Le chef s'installe chez vous. Un menu construit selon vos envies, servi à table ou en pleine nature, avec les vins accordés.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#ChefPrive #PrivateChef #Gastronomie #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_tiktok": "Le chef s'installe chez vous. Un menu construit selon vos envies, servi à table ou en pleine nature, avec les vins accordés.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#ChefPrive #PrivateChef #Gastronomie #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe"
  },
  {
   "id": "story-2027-02-05",
@@ -2246,6 +2466,27 @@
   ]
  },
  {
+  "id": "tt-terra-mare-villa",
+  "type": "post",
+  "theme": "Villa — Villa Terra Mare",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-terra-mare-villa/01.jpg",
+   "tt-terra-mare-villa/02.jpg",
+   "tt-terra-mare-villa/03.jpg",
+   "tt-terra-mare-villa/04.jpg",
+   "tt-terra-mare-villa/05.jpg",
+   "tt-terra-mare-villa/06.jpg",
+   "tt-terra-mare-villa/07.jpg"
+  ],
+  "titre_tiktok": "Villa Terra Mare — Sainte-Lucie-de-Porto-Vecchio",
+  "texte_tiktok": "Villa Terra Mare — Sainte-Lucie-de-Porto-Vecchio\n\nUne villa contemporaine en surplomb de Sainte-Lucie : la vue mer se prolonge des pièces de vie aux cinq suites. Piscine chauffée de 14,5 mètres, jacuzzi au coucher du soleil, terrain de pétanque, et les plages de Pinarello et Fautea en quelques minutes.\n\n10 voyageurs · 5 suites · 230 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nSea views from every suite, heated pool and sunset jacuzzi. Sleeps 10.\n\n#SainteLucie #CorseDuSud #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-02-13T19:00"
+ },
+ {
   "id": "story-2027-02-14",
   "type": "story",
   "date": "2027-02-14T12:30",
@@ -2376,6 +2617,24 @@
   ]
  },
  {
+  "id": "tt-monti-villa",
+  "type": "post",
+  "theme": "Villa — Villa Monti",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-monti-villa/01.jpg",
+   "tt-monti-villa/02.jpg",
+   "tt-monti-villa/03.jpg",
+   "tt-monti-villa/04.jpg"
+  ],
+  "titre_tiktok": "Villa Monti — Lecci",
+  "texte_tiktok": "Villa Monti — Lecci\n\nUne villa contemporaine de 270 m² de plain-pied à Lecci, à quelques minutes de Saint-Cyprien. Cinq chambres avec salle de bains et literie hôtelière, dont un studio indépendant, une salle de sport et une piscine bordée de bois.\n\n10 voyageurs · 5 chambres · 270 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nSingle-storey contemporary villa near Saint-Cyprien, with gym and independent studio. Sleeps 10.\n\n#Lecci #PortoVecchio #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel",
+  "date": "2027-02-20T19:00"
+ },
+ {
   "id": "story-2027-02-21",
   "type": "story",
   "date": "2027-02-21T12:30",
@@ -2503,6 +2762,25 @@
   "images": [
    "story-2027-02-27.jpg"
   ]
+ },
+ {
+  "id": "tt-svc-bien-etre",
+  "type": "post",
+  "theme": "Service — Bien-être",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-bien-etre/01.jpg",
+   "tt-svc-bien-etre/02.jpg",
+   "tt-svc-bien-etre/03.jpg",
+   "tt-svc-bien-etre/04.jpg",
+   "tt-svc-bien-etre/05.jpg"
+  ],
+  "titre_tiktok": "Bien-être",
+  "texte_tiktok": "Bien-être\n\nMassages, soins du visage, drainage, yoga au lever du soleil, coaching sportif ou natation : nos praticiens se déplacent à la villa, à l'heure qui vous convient.\n\nMassages, yoga and private coaching, at your villa.\n\n#BienEtre #Massage #Yoga #CorseDuSud #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2027-02-27T19:00"
  },
  {
   "id": "story-2027-02-28",
@@ -2765,6 +3043,24 @@
   ]
  },
  {
+  "id": "tt-pineta-villa",
+  "type": "post",
+  "theme": "Villa — Villa Pineta",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-pineta-villa/01.jpg",
+   "tt-pineta-villa/02.jpg",
+   "tt-pineta-villa/03.jpg",
+   "tt-pineta-villa/04.jpg"
+  ],
+  "titre_tiktok": "Villa Pineta — Pinarello",
+  "texte_tiktok": "Villa Pineta — Pinarello\n\nUne villa d'architecte de 280 m² dans un jardin de 2 400 m², à 900 mètres de la plage de Pinarello par un sentier dans le maquis. Six chambres avec salle de bains, un séjour de près de 100 m² et une piscine chauffée qui s'éclaire à la nuit tombée.\n\n14 voyageurs · 6 chambres · 280 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nArchitect villa in 2,400 m² of gardens, a ten-minute walk to Pinarello beach. Sleeps 14.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel",
+  "date": "2027-03-13T19:00"
+ },
+ {
   "id": "story-2027-03-14",
   "type": "story",
   "date": "2027-03-14T12:30",
@@ -2847,6 +3143,18 @@
   "images": [
    "story-2027-03-18.jpg"
   ]
+ },
+ {
+  "id": "tt-reel-golden-hour",
+  "type": "reel",
+  "date": "2027-03-18T19:00",
+  "theme": "Reel — Golden Hour",
+  "reseaux": [
+   "tiktok"
+  ],
+  "video": "golden-hour.mp4",
+  "vignette_ms": 4000,
+  "texte_tiktok": "L'heure dorée en Corse du Sud. Un rosé face au couchant, la mer qui s'embrase, puis la braise du dîner.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur arconciergerie.com.\n\n#GoldenHour #Corse #CorseDuSud #Corsica #VillaDeLuxe #LuxuryTravel #PortoVecchio"
  },
  {
   "id": "story-2027-03-19",
@@ -3027,6 +3335,26 @@
   ]
  },
  {
+  "id": "tt-ojani-villa",
+  "type": "post",
+  "theme": "Villa — Villa Ojani",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-ojani-villa/01.jpg",
+   "tt-ojani-villa/02.jpg",
+   "tt-ojani-villa/03.jpg",
+   "tt-ojani-villa/04.jpg",
+   "tt-ojani-villa/05.jpg",
+   "tt-ojani-villa/06.jpg"
+  ],
+  "titre_tiktok": "Villa Ojani — Sainte-Lucie-de-Porto-Vecchio",
+  "texte_tiktok": "Villa Ojani — Sainte-Lucie-de-Porto-Vecchio\n\nAu cœur de Sainte-Lucie, une villa contemporaine de 300 m² de plain-pied sur un terrain clos de 1 800 m². Pierre, bois et grands volumes, une terrasse couverte qui prolonge le séjour, et la plage de Pinarello comme les piscines naturelles du Cavu à quelques minutes.\n\n8 voyageurs · 4 chambres · 300 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nStone, wood and generous volumes near Pinarello and the Cavu natural pools. Sleeps 8.\n\n#SainteLucie #Cavu #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-03-27T19:00"
+ },
+ {
   "id": "story-2027-03-28",
   "type": "story",
   "date": "2027-03-28T12:30",
@@ -3159,6 +3487,24 @@
   "images": [
    "story-2027-04-03.jpg"
   ]
+ },
+ {
+  "id": "tt-svc-celebrer",
+  "type": "post",
+  "theme": "Service — Célébrer",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-celebrer/01.jpg",
+   "tt-svc-celebrer/02.jpg",
+   "tt-svc-celebrer/03.jpg",
+   "tt-svc-celebrer/04.jpg"
+  ],
+  "titre_tiktok": "Célébrer",
+  "texte_tiktok": "Célébrer\n\nUn anniversaire sur la plage, un dîner de mariage sous les pins, une soirée à la bougie dans une villa : décoration, chef, musique, feux d'artifice et coordination le jour J. Vous profitez de vos invités, nous nous occupons du reste.\n\nBirthdays, weddings and private dinners, coordinated from start to finish.\n\n#Evenement #Mariage #CorseDuSud #ArConciergerie #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2027-04-03T19:00"
  },
  {
   "id": "story-2027-04-04",
@@ -3305,6 +3651,24 @@
   ]
  },
  {
+  "id": "tt-baraccia-villa",
+  "type": "post",
+  "theme": "Villa — Villa Baraccia",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-baraccia-villa/01.jpg",
+   "tt-baraccia-villa/02.jpg",
+   "tt-baraccia-villa/03.jpg",
+   "tt-baraccia-villa/04.jpg"
+  ],
+  "titre_tiktok": "Villa Baraccia — Lac de Talza",
+  "texte_tiktok": "Villa Baraccia — Lac de Talza\n\nUne ancienne bergerie en pierre, sur une colline boisée qui domine le lac de Talza. Une chambre, une piscine chauffée creusée dans la roche, le silence du maquis. Pensée pour deux, à vingt minutes des plages de Porto-Vecchio et de Bonifacio.\n\n2 voyageurs · 1 chambre · 50 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nA stone bergerie for two above Lake Talza, with a heated pool carved into the rock.\n\n#Figari #SejourADeux #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-04-10T19:00"
+ },
+ {
   "id": "story-2027-04-11",
   "type": "story",
   "date": "2027-04-11T12:30",
@@ -3404,6 +3768,22 @@
   "images": [
    "story-2027-04-15.jpg"
   ]
+ },
+ {
+  "id": "reel-2027-04-15-l-arrivee",
+  "type": "reel",
+  "date": "2027-04-15T19:00",
+  "theme": "Reel",
+  "reseaux": [
+   "instagram",
+   "facebook",
+   "tiktok"
+  ],
+  "video": "l-arrivee.mp4",
+  "vignette_ms": 1500,
+  "texte_instagram": "L'arrivée, sans attendre. Hélicoptère depuis l'aéroport, chauffeur privé ou véhicule livré à la villa : votre séjour commence dès l'atterrissage.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#Helicoptere #TransfertPrive #Chauffeur #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_facebook": "L'arrivée, sans attendre. Hélicoptère depuis l'aéroport, chauffeur privé ou véhicule livré à la villa : votre séjour commence dès l'atterrissage.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#Helicoptere #TransfertPrive #Chauffeur #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_tiktok": "L'arrivée, sans attendre. Hélicoptère depuis l'aéroport, chauffeur privé ou véhicule livré à la villa : votre séjour commence dès l'atterrissage.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#Helicoptere #TransfertPrive #Chauffeur #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe"
  },
  {
   "id": "story-2027-04-16",
@@ -3595,6 +3975,24 @@
   ]
  },
  {
+  "id": "tt-alta-vista-villa",
+  "type": "post",
+  "theme": "Villa — Villa Alta Vista",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-alta-vista-villa/01.jpg",
+   "tt-alta-vista-villa/02.jpg",
+   "tt-alta-vista-villa/03.jpg",
+   "tt-alta-vista-villa/04.jpg"
+  ],
+  "titre_tiktok": "Villa Alta Vista — Hauteurs de Pinarello",
+  "texte_tiktok": "Villa Alta Vista — Hauteurs de Pinarello\n\nSur les hauteurs de Pinarello, dans un hameau confidentiel, une villa contemporaine au calme absolu, face à la mer et aux montagnes. Cinq suites, une piscine chauffée à 29 °C, un jacuzzi avec vue mer et une salle de sport.\n\n10 voyageurs · 5 suites · 300 m²\n\nDisponibilités été 2027 sur demande.\nPar message ou sur arconciergerie.com.\n\nA quiet hamlet above Pinarello, heated pool at 29°C and sea-view jacuzzi. Sleeps 10.\n\n#Pinarello #CorseDuSud #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-04-24T19:00"
+ },
+ {
   "id": "story-2027-04-25",
   "type": "story",
   "date": "2027-04-25T12:30",
@@ -3741,6 +4139,25 @@
   "images": [
    "story-2027-05-01.jpg"
   ]
+ },
+ {
+  "id": "tt-le-moulin-ete",
+  "type": "post",
+  "theme": "Été 2027 — Le Moulin Génois",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-le-moulin-ete/01.jpg",
+   "tt-le-moulin-ete/02.jpg",
+   "tt-le-moulin-ete/03.jpg",
+   "tt-le-moulin-ete/04.jpg",
+   "tt-le-moulin-ete/05.jpg"
+  ],
+  "titre_tiktok": "Le Moulin Génois — été 2027",
+  "texte_tiktok": "Le Moulin Génois — été 2027\n\nÉté 2027 à Bonifacio : dormir dans un moulin du XIIIᵉ siècle.\n\n6 voyageurs · 3 suites · 420 m²\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Bonifacio #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-05-01T19:00"
  },
  {
   "id": "story-2027-05-02",
@@ -4039,6 +4456,26 @@
   ]
  },
  {
+  "id": "tt-ghjiu-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Ghjiu",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-ghjiu-ete/01.jpg",
+   "tt-ghjiu-ete/02.jpg",
+   "tt-ghjiu-ete/03.jpg",
+   "tt-ghjiu-ete/04.jpg",
+   "tt-ghjiu-ete/05.jpg",
+   "tt-ghjiu-ete/06.jpg"
+  ],
+  "titre_tiktok": "Villa Ghjiu — été 2027",
+  "texte_tiktok": "Villa Ghjiu — été 2027\n\nPrès de 500 m² de terrasses face à la baie de Pinarello.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-05-15T19:00"
+ },
+ {
   "id": "story-2027-05-16",
   "type": "story",
   "date": "2027-05-16T12:30",
@@ -4139,6 +4576,18 @@
   ]
  },
  {
+  "id": "tt-reel-sounds-of-the-sea",
+  "type": "reel",
+  "date": "2027-05-20T19:00",
+  "theme": "Reel — Sounds of the Sea",
+  "reseaux": [
+   "tiktok"
+  ],
+  "video": "sounds-of-the-sea.mp4",
+  "vignette_ms": 4000,
+  "texte_tiktok": "La mer, de l'aube au couchant. Le granit sous la houle, l'eau turquoise, le pont d'un yacht à l'heure où le soleil descend.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur arconciergerie.com.\n\n#SoundsoftheSea #Corse #CorseDuSud #Corsica #VillaDeLuxe #LuxuryTravel #PortoVecchio"
+ },
+ {
   "id": "story-2027-05-21",
   "type": "story",
   "date": "2027-05-21T12:30",
@@ -4179,6 +4628,28 @@
   "images": [
    "story-2027-05-22.jpg"
   ]
+ },
+ {
+  "id": "tt-belvedere-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Belvedere",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-belvedere-ete/01.jpg",
+   "tt-belvedere-ete/02.jpg",
+   "tt-belvedere-ete/03.jpg",
+   "tt-belvedere-ete/04.jpg",
+   "tt-belvedere-ete/05.jpg",
+   "tt-belvedere-ete/06.jpg",
+   "tt-belvedere-ete/07.jpg",
+   "tt-belvedere-ete/08.jpg"
+  ],
+  "titre_tiktok": "Villa Belvedere — été 2027",
+  "texte_tiktok": "Villa Belvedere — été 2027\n\nUne piscine à débordement face à la baie de Palombaggia.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Palombaggia #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-05-22T19:00"
  },
  {
   "id": "story-2027-05-23",
@@ -4474,6 +4945,24 @@
   ]
  },
  {
+  "id": "tt-svc-sur-l-eau",
+  "type": "post",
+  "theme": "Service — Sur l'eau",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-sur-l-eau/01.jpg",
+   "tt-svc-sur-l-eau/02.jpg",
+   "tt-svc-sur-l-eau/03.jpg",
+   "tt-svc-sur-l-eau/04.jpg"
+  ],
+  "titre_tiktok": "Sur l'eau",
+  "texte_tiktok": "Sur l'eau\n\nJet-ski, ski nautique, wakeboard, paddle, scooter sous-marin : nous réservons les activités avec des moniteurs diplômés, au départ de la plage ou du bateau.\n\nWater sports with qualified instructors, from the beach or the boat.\n\n#SportsNautiques #PortoVecchio #CorseDuSud #ArConciergerie #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2027-06-05T19:00"
+ },
+ {
   "id": "story-2027-06-06",
   "type": "story",
   "date": "2027-06-06T12:30",
@@ -4574,6 +5063,22 @@
   "images": [
    "story-2027-06-10.jpg"
   ]
+ },
+ {
+  "id": "reel-2027-06-10-morning-in-corsica",
+  "type": "reel",
+  "date": "2027-06-10T19:00",
+  "theme": "Reel",
+  "reseaux": [
+   "instagram",
+   "facebook",
+   "tiktok"
+  ],
+  "video": "morning-in-corsica.mp4",
+  "vignette_ms": 1500,
+  "texte_instagram": "Un matin en Corse du Sud. Le soleil sur la mer, un café face à la piscine, un jus pressé, puis le premier plongeon.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#MorningInCorsica #MatinDEte #Piscine #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_facebook": "Un matin en Corse du Sud. Le soleil sur la mer, un café face à la piscine, un jus pressé, puis le premier plongeon.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#MorningInCorsica #MatinDEte #Piscine #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_tiktok": "Un matin en Corse du Sud. Le soleil sur la mer, un café face à la piscine, un jus pressé, puis le premier plongeon.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#MorningInCorsica #MatinDEte #Piscine #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe"
  },
  {
   "id": "story-2027-06-11",
@@ -4765,6 +5270,24 @@
   ]
  },
  {
+  "id": "tt-oliveto-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Oliveto",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-oliveto-ete/01.jpg",
+   "tt-oliveto-ete/02.jpg",
+   "tt-oliveto-ete/03.jpg",
+   "tt-oliveto-ete/04.jpg"
+  ],
+  "titre_tiktok": "Villa Oliveto — été 2027",
+  "texte_tiktok": "Villa Oliveto — été 2027\n\nÉté 2027 : Santa Giulia à deux minutes, une salle de cinéma pour les soirées.\n\n12 voyageurs · 5 chambres · 400 m²\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#SantaGiulia #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-06-19T19:00"
+ },
+ {
   "id": "story-2027-06-20",
   "type": "story",
   "date": "2027-06-20T12:30",
@@ -4908,6 +5431,27 @@
   "images": [
    "story-2027-06-26.jpg"
   ]
+ },
+ {
+  "id": "tt-aria-mare-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Aria Mare",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-aria-mare-ete/01.jpg",
+   "tt-aria-mare-ete/02.jpg",
+   "tt-aria-mare-ete/03.jpg",
+   "tt-aria-mare-ete/04.jpg",
+   "tt-aria-mare-ete/05.jpg",
+   "tt-aria-mare-ete/06.jpg",
+   "tt-aria-mare-ete/07.jpg"
+  ],
+  "titre_tiktok": "Villa Aria Mare — été 2027",
+  "texte_tiktok": "Villa Aria Mare — été 2027\n\nÉté 2027 : un jacuzzi face au large, au-dessus de Sainte-Lucie.\n\n10 voyageurs · 5 suites · 230 m²\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#SainteLucie #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-06-26T19:00"
  },
  {
   "id": "story-2027-06-27",
@@ -5159,6 +5703,22 @@
   ]
  },
  {
+  "id": "reel-2027-07-08-a-day-at-sea",
+  "type": "reel",
+  "date": "2027-07-08T19:00",
+  "theme": "Reel",
+  "reseaux": [
+   "instagram",
+   "facebook",
+   "tiktok"
+  ],
+  "video": "a-day-at-sea.mp4",
+  "vignette_ms": 1500,
+  "texte_instagram": "Une journée en mer. Les criques à l'eau turquoise, un plongeon depuis les rochers, un verre à bord et le coucher de soleil au retour. Bateau avec skipper, à la journée.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#ADayAtSea #Bateau #Yacht #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_facebook": "Une journée en mer. Les criques à l'eau turquoise, un plongeon depuis les rochers, un verre à bord et le coucher de soleil au retour. Bateau avec skipper, à la journée.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#ADayAtSea #Bateau #Yacht #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe",
+  "texte_tiktok": "Une journée en mer. Les criques à l'eau turquoise, un plongeon depuis les rochers, un verre à bord et le coucher de soleil au retour. Bateau avec skipper, à la journée.\n\nVillas d'exception et conciergerie privée, de Porto-Vecchio à Bonifacio. Disponibilités été 2027 sur demande, par message ou sur arconciergerie.com.\n\n#ADayAtSea #Bateau #Yacht #Corse #CorseDuSud #PortoVecchio #VillaDeLuxe"
+ },
+ {
   "id": "story-2027-07-09",
   "type": "story",
   "date": "2027-07-09T12:30",
@@ -5200,6 +5760,24 @@
   "images": [
    "story-2027-07-10.jpg"
   ]
+ },
+ {
+  "id": "tt-pineta-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Pineta",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-pineta-ete/01.jpg",
+   "tt-pineta-ete/02.jpg",
+   "tt-pineta-ete/03.jpg",
+   "tt-pineta-ete/04.jpg"
+  ],
+  "titre_tiktok": "Villa Pineta — été 2027",
+  "texte_tiktok": "Villa Pineta — été 2027\n\nÉté 2027 : quatorze voyageurs, six chambres, Pinarello à pied.\n\n14 voyageurs · 6 chambres · 280 m²\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-07-10T19:00"
  },
  {
   "id": "story-2027-07-11",
@@ -5490,6 +6068,23 @@
   "images": [
    "story-2027-07-24.jpg"
   ]
+ },
+ {
+  "id": "tt-svc-pique-nique",
+  "type": "post",
+  "theme": "Service — Déjeuner sur la roche",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-svc-pique-nique/01.jpg",
+   "tt-svc-pique-nique/02.jpg",
+   "tt-svc-pique-nique/03.jpg"
+  ],
+  "titre_tiktok": "Déjeuner sur la roche",
+  "texte_tiktok": "Déjeuner sur la roche\n\nUne table dressée sur un rocher au-dessus de la mer ou dans une clairière du maquis, un chef aux fourneaux, un sommelier pour les vins de l'île. Nous trouvons le lieu, installons tout et repartons sans laisser de trace.\n\nA table set in the wild, with chef and sommelier.\n\n#PiqueNique #ChefPrive #CorseDuSud #ArtDeVivre #Corse #Corsica #VillaDeLuxe #LuxuryTravel",
+  "date": "2027-07-24T19:00"
  },
  {
   "id": "story-2027-07-25",
@@ -5786,6 +6381,24 @@
   ]
  },
  {
+  "id": "tt-sole-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Sole",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-sole-ete/01.jpg",
+   "tt-sole-ete/02.jpg",
+   "tt-sole-ete/03.jpg",
+   "tt-sole-ete/04.jpg"
+  ],
+  "titre_tiktok": "Villa Sole — été 2027",
+  "texte_tiktok": "Villa Sole — été 2027\n\nUne salle de cinéma, un billard, et Pinarello à 900 mètres.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-08-07T19:00"
+ },
+ {
   "id": "story-2027-08-08",
   "type": "story",
   "date": "2027-08-08T12:30",
@@ -5930,6 +6543,24 @@
   "images": [
    "story-2027-08-14.jpg"
   ]
+ },
+ {
+  "id": "tt-alta-vista-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Alta Vista",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-alta-vista-ete/01.jpg",
+   "tt-alta-vista-ete/02.jpg",
+   "tt-alta-vista-ete/03.jpg",
+   "tt-alta-vista-ete/04.jpg"
+  ],
+  "titre_tiktok": "Villa Alta Vista — été 2027",
+  "texte_tiktok": "Villa Alta Vista — été 2027\n\nÉté 2027 : le calme d'un hameau au-dessus de Pinarello.\n\n10 voyageurs · 5 suites · 300 m²\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-08-14T19:00"
  },
  {
   "id": "story-2027-08-15",
@@ -6224,6 +6855,27 @@
   "images": [
    "story-2027-08-28.jpg"
   ]
+ },
+ {
+  "id": "tt-terra-mare-ete",
+  "type": "post",
+  "theme": "Été 2027 — Villa Terra Mare",
+  "reseaux": [
+   "tiktok"
+  ],
+  "images": [],
+  "images_tiktok": [
+   "tt-terra-mare-ete/01.jpg",
+   "tt-terra-mare-ete/02.jpg",
+   "tt-terra-mare-ete/03.jpg",
+   "tt-terra-mare-ete/04.jpg",
+   "tt-terra-mare-ete/05.jpg",
+   "tt-terra-mare-ete/06.jpg",
+   "tt-terra-mare-ete/07.jpg"
+  ],
+  "titre_tiktok": "Villa Terra Mare — été 2027",
+  "texte_tiktok": "Villa Terra Mare — été 2027\n\nLa mer depuis chaque chambre.\n\n10 voyageurs · 5 suites · 230 m²\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#SainteLucie #Ete2027 #VillaDeLuxe #CorseDuSud #Corse #Corsica #LuxuryTravel #PortoVecchio",
+  "date": "2027-08-28T19:00"
  },
  {
   "id": "story-2027-08-29",
