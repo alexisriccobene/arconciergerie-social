@@ -114,8 +114,21 @@ def publier_photos(p):
     info = {'title': p.get('titre_tiktok', '')[:90], 'description': p['texte_tiktok'][:4000], 'privacy_level': priv, 'disable_comment': False, 'auto_add_music': True,
             'brand_content_toggle': False, 'brand_organic_toggle': True}
     src = {'source': 'PULL_FROM_URL', 'photo_cover_index': 0, 'photo_images': [BASE + 'm/' + f for f in p['images_tiktok']]}
-    r = req(API + '/post/publish/content/init/', {'post_info': info, 'source_info': src, 'post_mode': 'DIRECT_POST', 'media_type': 'PHOTO'}, tok['access_token'], js=True)
-    return {'id': r['data']['publish_id'], 'confidentialite': priv}
+    mode = 'publication directe'
+    try:
+        r = req(API + '/post/publish/content/init/', {'post_info': info, 'source_info': src, 'post_mode': 'DIRECT_POST', 'media_type': 'PHOTO'}, tok['access_token'], js=True)
+    except RuntimeError as e:
+        if 'unaudited_client' not in str(e): raise
+        info = {k: v for k, v in info.items() if k in ('title', 'description')}
+        r = req(API + '/post/publish/content/init/', {'post_info': info, 'source_info': src, 'post_mode': 'MEDIA_UPLOAD', 'media_type': 'PHOTO'}, tok['access_token'], js=True)
+        mode = 'brouillon dans TikTok'
+    pid = r['data']['publish_id']
+    for _ in range(30):
+        st = req(API + '/post/publish/status/fetch/', {'publish_id': pid}, tok['access_token'], js=True).get('data', {})
+        if st.get('status') in ('PUBLISH_COMPLETE', 'SEND_TO_USER_INBOX'): return {'id': pid, 'mode': mode, 'statut': st.get('status')}
+        if st.get('status') == 'FAILED': raise RuntimeError('TikTok a refusé les photos : ' + str(st.get('fail_reason')))
+        time.sleep(6)
+    return {'id': pid, 'mode': mode, 'statut': 'en cours'}
 
 if MODE == 'verifier':
     c = createur(tok); etat({'connexion': 'OK', 'compte': c.get('creator_username'), 'confidentialite_possible': c.get('privacy_level_options')})
