@@ -10,6 +10,10 @@
  ],
  "duree_video_max_s": 3600,
  "reconnexion_avant": "28/10/2027",
- "controle": "2026-10-28T12:16+01:00",
- "essai reel-2027-01-14-sounds-of-summer": "échec : TikTok 403 /post/publish/video/init/ : {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"2026102811161344F9B38B7D6E9C60AEF5\"}}"
+ "controle": "2026-10-28T12:20+01:00",
+ "essai reel-2027-01-14-sounds-of-summer": {
+  "id": "v_inbox_file~v2.7701675970146846742",
+  "mode": "brouillon dans TikTok",
+  "statut": "SEND_TO_USER_INBOX"
+ }
 }
