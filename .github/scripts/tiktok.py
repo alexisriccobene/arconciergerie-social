@@ -3,7 +3,8 @@
 import json, os, sys, time, secrets, subprocess, urllib.request, urllib.parse, urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
-KEY, SECRET = os.environ.get('TIKTOK_CLIENT_KEY', ''), os.environ.get('TIKTOK_CLIENT_SECRET', '')
+KEY, SECRET = os.environ.get('TIKTOK_CLIENT_KEY', '').strip(), os.environ.get('TIKTOK_CLIENT_SECRET', '').strip()
+os.environ['TIKTOK_CLIENT_SECRET'] = SECRET  # sans espace parasite copié par erreur
 MODE = os.environ.get('MODE', 'publier')
 BASE = 'https://alexisriccobene.github.io/arconciergerie-social/'
 REDIRECT = BASE + 'tiktok.html'
