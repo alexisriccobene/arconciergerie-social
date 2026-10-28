@@ -10,9 +10,14 @@
  ],
  "duree_video_max_s": 3600,
  "reconnexion_avant": "28/10/2027",
- "controle": "2026-10-28T12:20+01:00",
+ "controle": "2026-10-28T12:29+01:00",
  "essai reel-2027-01-14-sounds-of-summer": {
   "id": "v_inbox_file~v2.7701675970146846742",
+  "mode": "brouillon dans TikTok",
+  "statut": "SEND_TO_USER_INBOX"
+ },
+ "essai test-tiktok-photos": {
+  "id": "p_inbox_url~v2.7701679121399072790",
   "mode": "brouillon dans TikTok",
   "statut": "SEND_TO_USER_INBOX"
  }
