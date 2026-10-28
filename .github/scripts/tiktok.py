@@ -86,8 +86,14 @@ def publier_video(p):
     priv = 'PUBLIC_TO_EVERYONE' if os.path.exists('.github/social/tiktok_public') and 'PUBLIC_TO_EVERYONE' in c.get('privacy_level_options', []) else 'SELF_ONLY'  # privé tant que l'application n'est pas validée par TikTok
     info = {'title': p['texte_tiktok'][:2200], 'privacy_level': priv, 'disable_comment': False, 'disable_duet': False, 'disable_stitch': False,
             'video_cover_timestamp_ms': p.get('vignette_ms', 1000), 'brand_content_toggle': False, 'brand_organic_toggle': True}
-    r = req(API + '/post/publish/video/init/', {'post_info': info, 'source_info': {'source': 'PULL_FROM_URL', 'video_url': BASE + 'm/' + p['video']}}, tok['access_token'], js=True)
+    # Envoi direct du fichier (FILE_UPLOAD) : pas de dépendance au site, un seul bloc jusqu'à 64 Mo
+    f = '.github/social/videos/' + p['video']; n = os.path.getsize(f)
+    r = req(API + '/post/publish/video/init/', {'post_info': info, 'source_info': {'source': 'FILE_UPLOAD', 'video_size': n, 'chunk_size': n, 'total_chunk_count': 1}}, tok['access_token'], js=True)
     pid = r['data']['publish_id']
+    up = urllib.request.Request(r['data']['upload_url'], data=open(f, 'rb').read(), method='PUT',
+                                headers={'Content-Type': 'video/mp4', 'Content-Length': str(n), 'Content-Range': 'bytes 0-%d/%d' % (n - 1, n)})
+    try: urllib.request.urlopen(up, timeout=300).read()
+    except urllib.error.HTTPError as e: raise RuntimeError('TikTok envoi vidéo %s : %s' % (e.code, e.read()[:300]))
     for _ in range(60):
         s = req(API + '/post/publish/status/fetch/', {'publish_id': pid}, tok['access_token'], js=True).get('data', {})
         if s.get('status') == 'PUBLISH_COMPLETE': return {'id': pid, 'confidentialite': priv}
