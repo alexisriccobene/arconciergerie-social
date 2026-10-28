@@ -8,7 +8,7 @@ os.environ['TIKTOK_CLIENT_SECRET'] = SECRET  # sans espace parasite copié par e
 MODE = os.environ.get('MODE', 'publier')
 BASE = 'https://alexisriccobene.github.io/arconciergerie-social/'
 REDIRECT = BASE + 'tiktok.html'
-ENC, ETAT, PLAN, DONE = '.github/social/tiktok.enc', '.github/social/tiktok_etat.json', '.github/social/plan.json', '.github/social/publie.json'
+ENC, ETAT, PLAN, DONE = '.github/social/tiktok.enc', '.github/social/tiktok_etat.json', '.github/social/plan.json', '.github/social/publie_tiktok.json'
 API = 'https://open.tiktokapis.com/v2'
 
 def req(url, data=None, token=None, js=False):

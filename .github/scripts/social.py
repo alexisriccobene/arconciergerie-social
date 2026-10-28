@@ -150,7 +150,9 @@ if MODE == 'verifier':
                   open('.github/social/inventaire.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     except Exception as e: etat['inventaire'] = 'erreur : ' + str(e)[:300]
     # Test des Reels à venir : Instagram télécharge et traite la vidéo, sans rien publier
-    for p in [x for x in json.load(open(PLAN, encoding='utf-8')) if x.get('type') == 'reel']:
+    deja = json.load(open('.github/social/etat.json', encoding='utf-8')) if os.path.exists('.github/social/etat.json') else {}
+    for p in [x for x in json.load(open(PLAN, encoding='utf-8')) if x.get('type') == 'reel' and 'instagram' in x.get('reseaux', [])]:
+        if 'FINISHED' in str(deja.get('test ' + p['id'], '')): etat['test ' + p['id']] = deja['test ' + p['id']]; continue
         try:
             c = api('POST', '/%s/media' % ig, media_type='REELS', video_url=VID + p['video'], caption='test', share_to_feed='true')['id']
             st = 'IN_PROGRESS'
