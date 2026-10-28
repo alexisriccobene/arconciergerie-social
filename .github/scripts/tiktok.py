@@ -83,7 +83,7 @@ tok = acces()
 
 def publier_video(p):
     c = createur(tok)
-    priv = 'PUBLIC_TO_EVERYONE' if 'PUBLIC_TO_EVERYONE' in c.get('privacy_level_options', []) else 'SELF_ONLY'
+    priv = 'PUBLIC_TO_EVERYONE' if os.path.exists('.github/social/tiktok_public') and 'PUBLIC_TO_EVERYONE' in c.get('privacy_level_options', []) else 'SELF_ONLY'  # privé tant que l'application n'est pas validée par TikTok
     info = {'title': p['texte_tiktok'][:2200], 'privacy_level': priv, 'disable_comment': False, 'disable_duet': False, 'disable_stitch': False,
             'video_cover_timestamp_ms': p.get('vignette_ms', 1000), 'brand_content_toggle': False, 'brand_organic_toggle': True}
     r = req(API + '/post/publish/video/init/', {'post_info': info, 'source_info': {'source': 'PULL_FROM_URL', 'video_url': BASE + 'm/' + p['video']}}, tok['access_token'], js=True)
@@ -97,7 +97,7 @@ def publier_video(p):
 
 def publier_photos(p):
     c = createur(tok)
-    priv = 'PUBLIC_TO_EVERYONE' if 'PUBLIC_TO_EVERYONE' in c.get('privacy_level_options', []) else 'SELF_ONLY'
+    priv = 'PUBLIC_TO_EVERYONE' if os.path.exists('.github/social/tiktok_public') and 'PUBLIC_TO_EVERYONE' in c.get('privacy_level_options', []) else 'SELF_ONLY'  # privé tant que l'application n'est pas validée par TikTok
     info = {'title': p.get('titre_tiktok', '')[:90], 'description': p['texte_tiktok'][:4000], 'privacy_level': priv, 'disable_comment': False, 'auto_add_music': True,
             'brand_content_toggle': False, 'brand_organic_toggle': True}
     src = {'source': 'PULL_FROM_URL', 'photo_cover_index': 0, 'photo_images': [BASE + 'm/' + f for f in p['images_tiktok']]}
