@@ -531,6 +531,30 @@
   ]
  },
  {
+  "id": "p06b-villa-leva",
+  "type": "post",
+  "date": "2026-11-20T18:30",
+  "theme": "Villa — Villa Leva",
+  "reseaux": [
+   "instagram",
+   "facebook"
+  ],
+  "images": [
+   "p06b-villa-leva-01.jpg",
+   "p06b-villa-leva-02.jpg",
+   "p06b-villa-leva-03.jpg",
+   "p06b-villa-leva-04.jpg",
+   "p06b-villa-leva-05.jpg",
+   "p06b-villa-leva-06.jpg",
+   "p06b-villa-leva-07.jpg",
+   "p06b-villa-leva-08.jpg",
+   "p06b-villa-leva-09.jpg",
+   "p06b-villa-leva-10.jpg"
+  ],
+  "texte_instagram": "Villa Leva — Pinarello\n\nTout ici est tourné vers la baie : les pièces de vie, les cinq suites et la piscine à débordement de 15 mètres, orientée vers le large et la tour génoise. Une salle de sport, une cuisine extérieure ombragée et une cave de grands crus complètent la maison.\n\n12 voyageurs · 5 suites · 300 m²\n\nDisponibilités été 2027 sur demande.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nFive suites facing Pinarello bay and its Genoese tower. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud",
+  "texte_facebook": "Villa Leva — Pinarello\n\nTout ici est tourné vers la baie : les pièces de vie, les cinq suites et la piscine à débordement de 15 mètres, orientée vers le large et la tour génoise. Une salle de sport, une cuisine extérieure ombragée et une cave de grands crus complètent la maison.\n\n12 voyageurs · 5 suites · 300 m²\n\nDisponibilités été 2027 sur demande.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nFive suites facing Pinarello bay and its Genoese tower. Sleeps 12.\n\n#Pinarello #PortoVecchio #VillaDeLuxe #CorseDuSud"
+ },
+ {
   "id": "story-2026-11-21",
   "type": "story",
   "date": "2026-11-21T12:30",
@@ -730,6 +754,29 @@
   "images": [
    "story-2026-11-26.jpg"
   ]
+ },
+ {
+  "id": "p07b-villa-tiare",
+  "type": "post",
+  "date": "2026-11-26T18:30",
+  "theme": "Villa — Villa Tiaré",
+  "reseaux": [
+   "instagram",
+   "facebook"
+  ],
+  "images": [
+   "p07b-villa-tiare-01.jpg",
+   "p07b-villa-tiare-02.jpg",
+   "p07b-villa-tiare-03.jpg",
+   "p07b-villa-tiare-04.jpg",
+   "p07b-villa-tiare-05.jpg",
+   "p07b-villa-tiare-06.jpg",
+   "p07b-villa-tiare-07.jpg",
+   "p07b-villa-tiare-08.jpg",
+   "p07b-villa-tiare-09.jpg"
+  ],
+  "texte_instagram": "Villa Tiaré — Marina di Fiori\n\nUn jardin arboré et clos de 1 420 m² à Marina di Fiori, une piscine bordée d'un deck en ipé, une table sous la tonnelle et une dépendance en pierre indépendante. Une maison de famille, à dix minutes de Cala Rossa et de Saint-Cyprien.\n\n8 voyageurs · 4 chambres · 3 salles de bain\n\nDisponibilités été 2027 sur demande.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nA walled garden, a pool and a stone guesthouse, ten minutes from Cala Rossa.\n\n#PortoVecchio #MarinaDiFiori #VillaDeLuxe #CorseDuSud",
+  "texte_facebook": "Villa Tiaré — Marina di Fiori\n\nUn jardin arboré et clos de 1 420 m² à Marina di Fiori, une piscine bordée d'un deck en ipé, une table sous la tonnelle et une dépendance en pierre indépendante. Une maison de famille, à dix minutes de Cala Rossa et de Saint-Cyprien.\n\n8 voyageurs · 4 chambres · 3 salles de bain\n\nDisponibilités été 2027 sur demande.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nA walled garden, a pool and a stone guesthouse, ten minutes from Cala Rossa.\n\n#PortoVecchio #MarinaDiFiori #VillaDeLuxe #CorseDuSud"
  },
  {
   "id": "reel-2026-11-26-spa-a-la-villa",
@@ -4678,7 +4725,7 @@
   ]
  },
  {
-  "id": "p0524-ete-leva",
+  "id": "p0524b-ete-leva",
   "type": "post",
   "date": "2027-05-24T18:30",
   "theme": "Seconde visite — Villa Leva",
@@ -4687,14 +4734,14 @@
    "facebook"
   ],
   "images": [
-   "p0524-ete-leva-01.jpg",
-   "p0524-ete-leva-02.jpg",
-   "p0524-ete-leva-03.jpg",
-   "p0524-ete-leva-04.jpg",
-   "p0524-ete-leva-05.jpg"
+   "p0524b-ete-leva-01.jpg",
+   "p0524b-ete-leva-02.jpg",
+   "p0524b-ete-leva-03.jpg",
+   "p0524b-ete-leva-04.jpg",
+   "p0524b-ete-leva-05.jpg"
   ],
-  "texte_instagram": "Villa Leva — été 2027\n\nQuinze mètres de piscine, tournés vers la tour génoise.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud",
-  "texte_facebook": "Villa Leva — été 2027\n\nQuinze mètres de piscine, tournés vers la tour génoise.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud"
+  "texte_instagram": "Villa Leva — été 2027\n\nQuinze mètres de piscine, tournés vers la tour génoise.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud",
+  "texte_facebook": "Villa Leva — été 2027\n\nQuinze mètres de piscine, tournés vers la tour génoise.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nSummer 2027 availability on request.\n\n#Pinarello #Ete2027 #VillaDeLuxe #CorseDuSud"
  },
  {
   "id": "story-2027-05-25",
@@ -5094,7 +5141,7 @@
   ]
  },
  {
-  "id": "p0611-ete-tiare",
+  "id": "p0611b-ete-tiare",
   "type": "post",
   "date": "2027-06-11T18:30",
   "theme": "Seconde visite — Villa Tiaré",
@@ -5103,14 +5150,14 @@
    "facebook"
   ],
   "images": [
-   "p0611-ete-tiare-01.jpg",
-   "p0611-ete-tiare-02.jpg",
-   "p0611-ete-tiare-03.jpg",
-   "p0611-ete-tiare-04.jpg",
-   "p0611-ete-tiare-05.jpg"
+   "p0611b-ete-tiare-01.jpg",
+   "p0611b-ete-tiare-02.jpg",
+   "p0611b-ete-tiare-03.jpg",
+   "p0611b-ete-tiare-04.jpg",
+   "p0611b-ete-tiare-05.jpg"
   ],
-  "texte_instagram": "Villa Tiaré — été 2027\n\nUn jardin clos de 1 420 m², une dépendance en pierre.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#MarinadiFiori #Ete2027 #VillaDeLuxe #CorseDuSud",
-  "texte_facebook": "Villa Tiaré — été 2027\n\nUn jardin clos de 1 420 m², une dépendance en pierre.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nPar message ou sur arconciergerie.com.\n\nSummer 2027 availability on request.\n\n#MarinadiFiori #Ete2027 #VillaDeLuxe #CorseDuSud"
+  "texte_instagram": "Villa Tiaré — été 2027\n\nUn jardin clos de 1 420 m², une dépendance en pierre.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nSummer 2027 availability on request.\n\n#MarinadiFiori #Ete2027 #VillaDeLuxe #CorseDuSud",
+  "texte_facebook": "Villa Tiaré — été 2027\n\nUn jardin clos de 1 420 m², une dépendance en pierre.\n\nIndiquez-nous vos dates : nous vous confirmons les disponibilités sous 24 heures.\nRéservez par message, sur arconciergerie.com ou à contact@arconciergerie.com\n\nSummer 2027 availability on request.\n\n#MarinadiFiori #Ete2027 #VillaDeLuxe #CorseDuSud"
  },
  {
   "id": "story-2027-06-12",
