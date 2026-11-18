@@ -1,0 +1,21 @@
+{
+ "connexion": "OK",
+ "pages_administrees": [
+  {
+   "urn": "urn:li:organization:105554276",
+   "nom": "ArConciergerie",
+   "page": "arconciergerie"
+  },
+  {
+   "urn": "urn:li:organization:146769059",
+   "nom": "TerrenUrbanisme",
+   "page": "terrenurbanisme"
+  }
+ ],
+ "page_utilisee": "urn:li:organization:105554276",
+ "scopes": "r_organization_social,rw_organization_admin,w_organization_social",
+ "version_api": "202610",
+ "jeton_valable_jusqu_au": "17/01/2027",
+ "reconnexion_avant": "18/11/2027",
+ "controle": "2026-11-18T13:09+01:00"
+}
