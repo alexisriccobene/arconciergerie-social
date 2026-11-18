@@ -4,7 +4,9 @@
 import json, os, re, sys, time, secrets, subprocess, urllib.request, urllib.parse, urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
-CID, SECRET = os.environ.get('LINKEDIN_CLIENT_ID', '').strip(), os.environ.get('LINKEDIN_CLIENT_SECRET', '').strip()
+CID = os.environ.get('LINKEDIN_CLIENT_ID', '').strip() or '78g15j5k80xm1i'  # identifiant public de l'application LinkedIn
+SECRET = os.environ.get('LINKEDIN_CLIENT_SECRET', '').strip()
+PAGE_ARC = 'urn:li:organization:105554276'  # page LinkedIn ArConciergerie
 os.environ['LINKEDIN_CLIENT_SECRET'] = SECRET
 MODE = os.environ.get('MODE', 'publier')
 BASE = 'https://alexisriccobene.github.io/arconciergerie-social/'
@@ -88,18 +90,19 @@ def pages(tok):
     return out
 
 def choisir(lst):
+    if any(p['urn'] == PAGE_ARC for p in lst): return PAGE_ARC
     for p in lst:
         if re.sub(r'\W', '', (p.get('nom') or '') + (p.get('page') or '')).lower().find('arconciergerie') >= 0: return p['urn']
     return lst[0]['urn'] if len(lst) == 1 else None
-
-if not CID or not SECRET:
-    print('::warning::LinkedIn non configuré (secrets LINKEDIN_CLIENT_ID et LINKEDIN_CLIENT_SECRET manquants)'); sys.exit(0)
 
 if MODE == 'page':
     url = 'https://www.linkedin.com/oauth/v2/authorization?' + urllib.parse.urlencode({'response_type': 'code', 'client_id': CID,
           'redirect_uri': REDIRECT, 'state': secrets.token_hex(8), 'scope': SCOPES})
     tpl = open('docs/connexion-linkedin.tpl.html', encoding='utf-8').read().replace('{{URL}}', url)
     open('docs/connexion-linkedin.html', 'w', encoding='utf-8').write(tpl); print('page de connexion LinkedIn générée'); sys.exit(0)
+
+if not SECRET:
+    print('::warning::LinkedIn non configuré (secret LINKEDIN_CLIENT_SECRET manquant)'); sys.exit(0)
 
 if MODE == 'jeton':
     code = urllib.parse.unquote(os.environ.get('LINKEDIN_CODE', '').strip())
