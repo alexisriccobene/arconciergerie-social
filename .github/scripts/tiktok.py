@@ -51,6 +51,74 @@ def etat(extra):
 def createur(tok):
     return req(API + '/post/publish/creator_info/query/', {}, tok['access_token'], js=True).get('data', {})
 
+# ---------- Zernio (application validée par TikTok : publication publique directe) ----------
+ZK = os.environ.get('ZERNIO_API_KEY', '').strip()
+ZAPI = 'https://zernio.com/api/v1'
+VIDEOS = 'https://raw.githubusercontent.com/alexisriccobene/arconciergerie-social/main/.github/social/videos/'
+def zreq(meth, path, data=None):
+    r = urllib.request.Request(ZAPI + path, data=json.dumps(data).encode() if data is not None else None, method=meth,
+                               headers={'Authorization': 'Bearer ' + ZK, 'Content-Type': 'application/json'})
+    try:
+        with urllib.request.urlopen(r, timeout=180) as x: return x.status, json.loads(x.read() or b'{}')
+    except urllib.error.HTTPError as e:
+        raise RuntimeError('Zernio %s %s : %s' % (e.code, path, e.read()[:600].decode(errors='replace')))
+def z_compte():
+    _, r = zreq('GET', '/accounts')
+    lst = r.get('accounts', r if isinstance(r, list) else r.get('data', []))
+    tt = [a for a in lst if str(a.get('platform', '')).lower() == 'tiktok']
+    for a in tt:
+        n = ' '.join(str(a.get(k, '')) for k in ('username', 'displayName', 'name', 'handle')).lower()
+        if 'arconciergerie' in n: return a['_id'], n
+    raise RuntimeError('Compte TikTok ArConciergerie introuvable dans Zernio : ' + json.dumps([{k: a.get(k) for k in ('platform', 'username', 'displayName')} for a in lst])[:400])
+def texte_tt(t):
+    import re
+    corps = re.sub(r'(\s*#\w+)+\s*$', '', t.strip()); tags = re.findall(r'#\w+', t)
+    if 'arconciergerie.com' not in corps: corps += '\n\nRéservations et demandes : arconciergerie.com'
+    if 'contact@arconciergerie.com' not in corps: corps += '\ncontact@arconciergerie.com'
+    vus = []
+    for x in tags + ['#Corse', '#VillaDeLuxe', '#CorseDuSud']:
+        if x.lower() not in [v.lower() for v in vus]: vus.append(x)
+    return corps + '\n\n' + ' '.join(vus[:5])
+def z_post(p, acc, test=False):
+    reel = p.get('type') == 'reel'
+    media = [{'url': VIDEOS + p['video'], 'type': 'video'}] if reel else [{'url': BASE + 'm/' + f, 'type': 'image'} for f in p['images_tiktok']]
+    ts = {'privacyLevel': 'PUBLIC_TO_EVERYONE', 'allowComment': True, 'allowDuet': True, 'allowStitch': True,
+          'contentPreviewConfirmed': True, 'expressConsentGiven': True, 'draft': False}
+    if not reel: ts['autoAddMusic'] = True
+    if reel: ts['videoCoverTimestampMs'] = p.get('vignette_ms', 1000)
+    psd = {'tiktokSettings': ts}
+    if not reel: psd['title'] = p.get('titre_tiktok', '')[:90]
+    body = {'content': texte_tt(p['texte_tiktok']), 'mediaItems': media, 'platforms': [{'platform': 'tiktok', 'accountId': acc, 'platformSpecificData': psd}],
+            'tiktokSettings': ts, 'publishNow': True}
+    if test: body['dryRun'] = True
+    st, r = zreq('POST', '/posts', body)
+    post = r.get('post', {}) if isinstance(r, dict) else {}
+    if st == 207 or post.get('status') in ('failed', 'partial'):
+        raise RuntimeError('Zernio : publication refusée ' + json.dumps(r.get('platformResults') or r.get('error') or r)[:500])
+    return {'zernio': post.get('_id', 'test'), 'statut': post.get('status', 'ok'), 'mode': 'public (Zernio)', 'avertissements': r.get('warnings', [])}
+if ZK and MODE in ('publier', 'verifier'):
+    acc, nom = z_compte()
+    if MODE == 'verifier':
+        etat({'zernio': 'OK', 'zernio_compte': nom})
+        for pid in [x for x in os.environ.get('TIKTOK_TEST', '').split(',') if x]:
+            p = next(x for x in json.load(open(PLAN, encoding='utf-8')) if x['id'] == pid)
+            try: etat({'test zernio ' + pid: z_post(p, acc, test=True)})
+            except Exception as e: etat({'test zernio ' + pid: 'échec : ' + str(e)[:500]})
+        sys.exit(0)
+    plan = json.load(open(PLAN, encoding='utf-8')); done = json.load(open(DONE, encoding='utf-8')) if os.path.exists(DONE) else {}
+    now = datetime.now(ZoneInfo('Europe/Paris')); changed = False; errors = []
+    for p in plan:
+        if 'tiktok' not in p.get('reseaux', []): continue
+        when = datetime.fromisoformat(p['date']).replace(tzinfo=ZoneInfo('Europe/Paris'))
+        if when > now or (now - when).total_seconds() > 20 * 3600: continue
+        d = done.setdefault(p['id'], {})
+        if d.get('tiktok') or d.get('tiktok_echecs', 0) >= 2: continue
+        try: d['tiktok'] = z_post(p, acc); changed = True; print('::notice::%s publié sur TikTok (public)' % p['id'])
+        except Exception as e: d['tiktok_echecs'] = d.get('tiktok_echecs', 0) + 1; changed = True; errors.append('%s : %s' % (p['id'], e)); print('::error::' + str(e)[:600])
+    if changed: json.dump(done, open(DONE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if errors: print('\n'.join(errors)); sys.exit(1)
+    sys.exit(0)
+
 if not KEY or not SECRET:
     print('::warning::TikTok non configuré (secrets TIKTOK_CLIENT_KEY et TIKTOK_CLIENT_SECRET manquants)'); sys.exit(0)
 
