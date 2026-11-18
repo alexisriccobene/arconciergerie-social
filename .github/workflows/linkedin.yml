@@ -1,0 +1,43 @@
+name: LinkedIn
+on:
+  schedule:
+    - cron: '4,19,34,49 * * * *'
+  push:
+    branches: [main]
+    paths: [.github/social/linkedin_demande.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: linkedin
+  cancel-in-progress: false
+jobs:
+  linkedin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Action LinkedIn
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_CODE: ${{ secrets.LINKEDIN_CODE }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            export MODE=$(python3 -c "import json;print(json.load(open('.github/social/linkedin_demande.json'))['mode'])")
+            export LINKEDIN_TEST=$(python3 -c "import json;print(json.load(open('.github/social/linkedin_demande.json')).get('essai',''))")
+          else export MODE=publier; fi
+          python3 .github/scripts/linkedin.py || { echo ECHEC > /tmp/echec; }
+          if [ -f /tmp/echec ] && [ "$MODE" = "publier" ]; then
+            t="Échec de publication LinkedIn"; if ! gh issue list --state open --search "$t in:title" --json number -q '.[0].number' | grep -q .; then
+              gh issue create --title "$t" --assignee "${GITHUB_REPOSITORY%%/*}" --body "Une publication LinkedIn n'est pas partie (ou la connexion arrive à expiration). Ouvrez la conversation Claude ArConciergerie et écrivez : « alerte LinkedIn »."; fi
+          fi
+      - name: Enregistrer
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain .github/social docs)" ]; then
+            git config user.name "ArConciergerie publication"; git config user.email "contact@arconciergerie.com"
+            git add .github/social docs; git commit -m "LinkedIn : mise à jour" && git pull --rebase && git push
+          fi
