@@ -172,6 +172,18 @@ def publier(p):
 def a_publier(p):
     return p.get('type') in ('post', 'reel') and ('instagram' in p.get('reseaux', []) or 'facebook' in p.get('reseaux', [])) and p['date'] >= DEBUT
 
+if MODE == 'supprimer':
+    done = json.load(open(DONE, encoding='utf-8')) if os.path.exists(DONE) else {}
+    for pid in [x for x in (os.environ.get('LINKEDIN_TEST') or '').split(',') if x]:
+        urn = (done.get(pid) or {}).get('linkedin')
+        if not urn or not urn.startswith('urn:'): etat({'suppression ' + pid: 'aucun post LinkedIn connu'}); continue
+        try:
+            http('DELETE', REST + '/posts/' + urllib.parse.quote(urn, safe=''), token=tok['access_token'])
+            done[pid]['linkedin_supprime'] = urn; done[pid].pop('linkedin'); done[pid]['linkedin_echecs'] = 9
+            etat({'suppression ' + pid: 'supprimé'}); print('::notice::%s supprimé de LinkedIn' % pid)
+        except Exception as e: etat({'suppression ' + pid: 'échec : ' + str(e)[:400]}); print('::error::' + str(e)[:400])
+    json.dump(done, open(DONE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1); sys.exit(0)
+
 if MODE == 'verifier':
     lst = pages(tok)
     if not ORG and choisir(lst): tok['org'] = ORG = choisir(lst); sauver(tok)
