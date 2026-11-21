@@ -17,7 +17,8 @@
  "version_api": "202610",
  "jeton_valable_jusqu_au": "17/01/2027",
  "reconnexion_avant": "18/11/2027",
- "controle": "2026-11-18T13:10+01:00",
+ "controle": "2026-11-21T23:23+01:00",
  "posts_prevus": 118,
- "essai p11-villa-belvedere": "urn:li:ugcPost:7528791824728039425"
+ "essai p11-villa-belvedere": "urn:li:ugcPost:7528791824728039425",
+ "suppression p14-carnet-bonifacio": "échec : LinkedIn 404 /posts/urn%3Ali%3AugcPost%3A7529970831259504641 : {\"code\":\"NOT_FOUND\",\"message\":\"Could not find entity\",\"status\":404}"
 }
