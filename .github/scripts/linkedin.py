@@ -181,7 +181,15 @@ if MODE == 'supprimer':
             http('DELETE', REST + '/posts/' + urllib.parse.quote(urn, safe=''), token=tok['access_token'])
             done[pid]['linkedin_supprime'] = urn; done[pid].pop('linkedin'); done[pid]['linkedin_echecs'] = 9
             etat({'suppression ' + pid: 'supprimé'}); print('::notice::%s supprimé de LinkedIn' % pid)
-        except Exception as e: etat({'suppression ' + pid: 'échec : ' + str(e)[:400]}); print('::error::' + str(e)[:400])
+        except Exception as e:
+            if '404' in str(e):
+                try:
+                    ref = (done.get('p13-villa-sole') or {}).get('linkedin')
+                    http('GET', REST + '/posts/' + urllib.parse.quote(ref, safe=''), token=tok['access_token']); controle = 'méthode OK (Villa Sole trouvée)'
+                except Exception as e2: controle = 'contrôle : ' + str(e2)[:200]
+                done[pid]['linkedin_supprime'] = urn; done[pid].pop('linkedin', None); done[pid]['linkedin_echecs'] = 9
+                etat({'suppression ' + pid: 'déjà absent de LinkedIn ; ' + controle})
+            else: etat({'suppression ' + pid: 'échec : ' + str(e)[:400]}); print('::error::' + str(e)[:400])
     json.dump(done, open(DONE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1); sys.exit(0)
 
 if MODE == 'verifier':
