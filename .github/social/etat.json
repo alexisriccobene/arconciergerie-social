@@ -1,7 +1,7 @@
 {
  "page": "ArConciergerie",
  "instagram": "17841469455925584",
- "controle": "2026-11-21T22:06+01:00",
+ "controle": "2026-11-21T22:17+01:00",
  "token": {
   "type": "PAGE",
   "valide": true,
@@ -25,17 +25,8 @@
   "permalink": "https://www.instagram.com/stories/arconciergerie_/4035279712209233756",
   "timestamp": "2026-11-21T12:07:42+0000"
  },
- "p14-carnet-bonifacio instagram": {
-  "id": "18058639457587962",
-  "media_type": "CAROUSEL_ALBUM",
-  "permalink": "https://www.instagram.com/p/DgAxYqViQ3_/",
-  "timestamp": "2026-11-21T17:31:03+0000"
- },
- "p14-carnet-bonifacio facebook": {
-  "id": "674950632360817_122200376600864240",
-  "created_time": "2026-11-21T17:31:12+0000",
-  "permalink_url": "https://www.facebook.com/122199941624864240/posts/122200376600864240"
- },
+ "p14-carnet-bonifacio instagram": "erreur : Meta 400 /18058639457587962 : {\"error\":{\"message\":\"Unsupported get request. Object with ID '18058639457587962' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api\",\"",
+ "p14-carnet-bonifacio facebook": "erreur : Meta 400 /674950632360817_122200376600864240 : {\"error\":{\"message\":\"(#10) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' fea",
  "stories facebook de la page": [
   {
    "post_id": "2312337216214419",
